@@ -23,6 +23,28 @@ body {
   color: var(--dark);
   transition: background 0.6s ease, color 0.6s ease;
   overflow-x: hidden;
+  cursor: none;
+  /* Hide default cursor */
+}
+
+a,
+button,
+[role="button"],
+.university-box,
+.btn {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+
+  body,
+  a,
+  button,
+  [role="button"],
+  .university-box,
+  .btn {
+    cursor: auto !important;
+  }
 }
 
 body.dark {
@@ -56,7 +78,7 @@ body.dark {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -147,6 +169,11 @@ body.dark {
   .nav-btns .btn:not(.dark):not(.red) {
     display: none;
     /* Hide non-essential buttons on very small screens to save space */
+  }
+
+  /* Hide custom cursor on mobile */
+  .cursor-pill-container {
+    display: none !important;
   }
 
   .logo span {
@@ -293,10 +320,10 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(36px, 9vw, 72px);
+  font-size: clamp(20px, 5vw, 42px);
   line-height: 1.1;
   font-weight: 800;
-  max-width: 1000px;
+  max-width: 800px;
   color: inherit;
   /* Ensure visibility in dark mode */
 }
@@ -322,12 +349,13 @@ a {
 }
 
 .hero p {
-  margin-top: 30px;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-top: 45px;
+  font-size: clamp(0.75rem, 1.4vw, 0.95rem);
   color: inherit;
   opacity: 0.8;
-  max-width: 600px;
-  line-height: 1.6;
+  max-width: 500px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
 }
 
 .hero-btns {
@@ -399,7 +427,7 @@ a {
 
 .about-eyebrow {
   margin-bottom: 20px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
   font-weight: 500;
   color: #777;
@@ -408,8 +436,8 @@ a {
 }
 
 .about h2 {
-  font-size: clamp(32px, 7vw, 56px);
-  margin-bottom: 25px;
+  font-size: clamp(20px, 4vw, 34px);
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
@@ -418,8 +446,8 @@ a {
 }
 
 .about>.about-container>p {
-  font-size: 19px;
-  color: #666;
+  font-size: 17px;
+  color: #333;
   line-height: 1.7;
   max-width: 800px;
   margin: 0 auto 60px;
@@ -455,7 +483,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -479,15 +507,15 @@ a {
 }
 
 .about-card h3 {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .about-card p {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.6;
-  color: #666;
+  color: #333;
   font-family: 'Courier New', monospace;
   /* Monospace for problem description style */
 }
@@ -634,7 +662,7 @@ a {
 
 .features-eyebrow {
   margin-bottom: 25px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 3px;
   font-weight: 500;
   color: #888;
@@ -643,8 +671,8 @@ a {
 }
 
 .features h2 {
-  font-size: clamp(36px, 6vw, 64px);
-  margin-bottom: 80px;
+  font-size: clamp(22px, 3.5vw, 38px);
+  margin-bottom: 50px;
   line-height: 1.1;
   font-weight: 700;
   opacity: 1;
@@ -773,14 +801,14 @@ a {
 }
 
 .feature-card h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   letter-spacing: -0.02em;
 }
 
 .feature-card p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.6;
   color: #666;
 }
@@ -807,7 +835,7 @@ a {
 
 .growth-strip-container h3 {
   margin-bottom: 30px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-align: left;
 }
@@ -859,7 +887,7 @@ a {
 }
 
 .growth-num {
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   /* Slightly larger */
   font-weight: 800;
   margin-bottom: 12px;
@@ -874,20 +902,20 @@ a {
 }
 
 .growth-num .trend {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #22c55e;
   font-weight: 600;
 }
 
 .growth-num .accent {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--primary);
   font-weight: 600;
 }
 
 .growth-segment p {
   color: #666;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   margin: 0;
   font-weight: 500;
 }
@@ -979,7 +1007,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .college-info span:first-child {
@@ -989,7 +1017,7 @@ a {
 
 .college-info .count {
   color: #666;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .progress-bar {
@@ -1016,7 +1044,7 @@ a {
 
 .universities-collaboration h2 {
   margin-bottom: 60px;
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: clamp(28px, 4vw, 42px);
 }
 
 .university-grid {
@@ -1067,7 +1095,7 @@ a {
 }
 
 .university-box h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 8px;
   color: var(--dark);
@@ -1080,7 +1108,7 @@ a {
 
 .university-box p {
   color: #666;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   margin-bottom: 20px;
   font-weight: 500;
 }
@@ -1173,7 +1201,7 @@ a {
 }
 
 .cta h2 {
-  font-size: clamp(24px, 5vw, 40px);
+  font-size: clamp(22px, 4vw, 34px);
 }
 
 .cta span {
@@ -1219,7 +1247,7 @@ a {
 
 .footer-tagline {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.6;
   max-width: 300px;
   margin-bottom: 20px;
@@ -1258,7 +1286,7 @@ a {
 }
 
 .link-column h4 {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 1.5px;
   color: #555;
   margin-bottom: 25px;
@@ -1273,7 +1301,7 @@ a {
 
 .link-column a {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -1307,7 +1335,7 @@ a {
   align-items: center;
   color: #666;
   /* Muted dark for light mode */
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .dark .footer-bottom {
@@ -1381,6 +1409,8 @@ a {
 .dark {
   background: var(--bg-dark);
   color: #fff;
+  font-size: 0.95rem;
+  /* Slightly smaller base for dark mode */
 }
 
 .dark .btn {
@@ -1493,7 +1523,7 @@ a {
   padding: 8px 16px;
   border: 1px solid rgba(255, 92, 77, 0.3);
   color: var(--primary);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 30px;
@@ -1501,15 +1531,15 @@ a {
 }
 
 .fix-forward h2 {
-  font-size: clamp(36px, 5vw, 54px);
-  /* Slightly reduced size */
+  font-size: clamp(24px, 3vw, 36px);
+  /* Aggressive reduction */
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .fix-forward-subtitle {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
   /* Slightly reduced size */
   color: #666;
   max-width: 700px;
@@ -1547,10 +1577,10 @@ a {
 }
 
 .ff-card h3 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   /* Reduced size */
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
@@ -1558,7 +1588,7 @@ a {
   color: #444;
   line-height: 1.7;
   margin-bottom: 30px;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .dark .ff-meaning-text {

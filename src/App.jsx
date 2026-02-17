@@ -9,6 +9,14 @@ import SpaceBackground from "./components/SpaceBackground";
 import CustomCursor from "./components/CustomCursor";
 import Magnetic from "./components/Magnetic";
 import SolarSystem from "./components/SolarSystem";
+import {
+  Briefcase,
+  Zap,
+  BrainCircuit,
+  Users,
+  Rocket,
+  Share2
+} from "lucide-react";
 
 // College Logos
 import sastraLogo from "./assets/colleges/sastra.png";
@@ -136,9 +144,9 @@ function App() {
         </div>
 
         <div className="nav-btns">
-          <button className="btn red">FIX FORWARD</button>
-          <button className="btn">CAREERS</button>
-          <button className="btn red">JOIN NOW</button>
+          <a href="https://fixforward.hyrup.in/" className="btn red" target="_blank" rel="noopener noreferrer">FIX FORWARD</a>
+          <a href="https://www.hyrup.in/careers" className="btn" target="_blank" rel="noopener noreferrer">CAREERS</a>
+          <a href="https://students.hyrup.in/" className="btn red" target="_blank" rel="noopener noreferrer">JOIN NOW</a>
 
           <button className="btn dark" onClick={toggleDark}>
             {dark ? "☀" : "🌙"}
@@ -172,14 +180,14 @@ function App() {
 
         <div className="hero-btns">
           <div className="btn-wrapper">
-            <button className="btn red">
-              <a href="https://students.hyrup.in/">GET STARTED FREE →</a>
-            </button>
+            <a href="https://students.hyrup.in/" className="btn red" target="_blank" rel="noopener noreferrer">
+              GET STARTED FOR FREE →
+            </a>
           </div>
           <div className="btn-wrapper">
-            <button className="btn black">
-              <a href="https://www.hyrup.in/#features">EXPLORE FEATURES</a>
-            </button>
+            <a href="https://www.hyrup.in/#features" className="btn black">
+              EXPLORE FEATURES
+            </a>
           </div>
         </div>
       </section>
@@ -258,42 +266,54 @@ function App() {
           <div className="features-grid">
             {/* Card 1 */}
             <div className="feature-card">
-              <div className="icon-box orange"></div>
+              <div className="icon-box orange">
+                <Briefcase size={24} color="white" />
+              </div>
               <h3>Skill-Based Profiles</h3>
               <p>Showcase what you can actually do, not where you studied. Build a portfolio that proves your worth.</p>
             </div>
 
             {/* Card 2 */}
             <div className="feature-card">
-              <div className="icon-box orange"></div>
+              <div className="icon-box orange">
+                <Zap size={24} color="white" />
+              </div>
               <h3>5-Minute Skill Proof</h3>
               <p>Quick assessments that showcase your abilities to employers. No more endless coding marathons.</p>
             </div>
 
             {/* Card 3 */}
             <div className="feature-card">
-              <div className="icon-box orange"></div>
+              <div className="icon-box orange">
+                <BrainCircuit size={24} color="white" />
+              </div>
               <h3>Smart Job Matching</h3>
               <p>AI-powered connections that actually fit your skills and goals. Context, not just keywords.</p>
             </div>
 
             {/* Card 4 */}
             <div className="feature-card">
-              <div className="icon-box orange"></div>
+              <div className="icon-box orange">
+                <Users size={24} color="white" />
+              </div>
               <h3>Mentor-Led Communities</h3>
               <p>Join exclusive communities led by industry experts. Learn from people who've been there.</p>
             </div>
 
             {/* Card 5 */}
             <div className="feature-card">
-              <div className="icon-box orange"></div>
+              <div className="icon-box orange">
+                <Rocket size={24} color="white" />
+              </div>
               <h3>Early Access Jobs</h3>
               <p>See new opportunities before they go public. The early bird advantage, automated.</p>
             </div>
 
             {/* Card 6 */}
             <div className="feature-card">
-              <div className="icon-box orange"></div>
+              <div className="icon-box orange">
+                <Share2 size={24} color="white" />
+              </div>
               <h3>Direct Connections</h3>
               <p>Skip the cold DMs. Connect directly with recruiters and mentors who want to meet you.</p>
             </div>
@@ -357,7 +377,9 @@ function App() {
               <h3>Why Join?</h3>
               <p className="ff-meaning-text">Stop building todo apps. Start solving actual problems. Your skills deserve a better stage. This is where your code stops being homework and starts being a portfolio piece recruiters actually want to see.</p>
 
-              <button className="ff-register-btn">REGISTER FOR FIX FORWARD →</button>
+              <a href="https://fixforward.hyrup.in/" className="ff-register-btn" target="_blank" rel="noopener noreferrer">
+                REGISTER FOR FIX FORWARD →
+              </a>
             </motion.div>
           </div>
 
@@ -428,15 +450,17 @@ function App() {
           </div>
 
 
-          <button className="btn red">START FOR FREE →</button>
+          <a href="https://students.hyrup.in/" className="btn red" target="_blank" rel="noopener noreferrer">
+            START FOR FREE →
+          </a>
         </div>
       </section>
 
       <section className="cta">
         <h2>Ready To Launch Your <span className="text-primary">Career?</span></h2>
-        <button className="btn red">
-          <a href="https://students.hyrup.in/">JOIN HYRUP NOW →</a>
-        </button>
+        <a href="https://students.hyrup.in/" className="btn red" target="_blank" rel="noopener noreferrer">
+          JOIN HYRUP NOW →
+        </a>
       </section>
 
       <footer className="footer">
