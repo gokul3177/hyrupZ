@@ -1693,6 +1693,8 @@ a {
   /* Increased vertical padding */
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .free-banner {

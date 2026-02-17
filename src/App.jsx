@@ -391,7 +391,7 @@ function App() {
       <section className="free-banner-section">
         <div className="free-banner">
           <h2>100% Free. Forever.</h2>
-          <p>Join students who are already using HYRUP to build their careers. No hidden fees, no premium plans, no credit card required.</p>
+          <p>Join 3,154+ students who are already using HYRUP to build their careers. No hidden fees, no premium plans, no credit card required.</p>
 
 
           <button className="btn red">START FOR FREE →</button>
