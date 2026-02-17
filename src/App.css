@@ -93,6 +93,9 @@ body.dark {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 18px;
   border: 1px solid #000;
   background: transparent;
@@ -101,6 +104,7 @@ body.dark {
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .hero-btns {
@@ -359,7 +363,7 @@ a {
 }
 
 .hero-btns {
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -447,7 +451,7 @@ a {
 
 .about>.about-container>p {
   font-size: 17px;
-  color: #333;
+  color: #111;
   line-height: 1.7;
   max-width: 800px;
   margin: 0 auto 60px;
@@ -515,7 +519,7 @@ a {
 .about-card p {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
+  color: #111;
   font-family: 'Courier New', monospace;
   /* Monospace for problem description style */
 }
@@ -543,7 +547,7 @@ a {
 .dark .about p,
 .dark .about-card h3,
 .dark .about-card p {
-  color: #ddd;
+  color: #eee;
 }
 
 @media (max-width: 768px) {
@@ -810,11 +814,11 @@ a {
 .feature-card p {
   font-size: 0.85rem;
   line-height: 1.6;
-  color: #666;
+  color: #222;
 }
 
 .dark .feature-card p {
-  color: #888;
+  color: #eee;
 }
 
 /* COLLEGE LIST STYLES */
@@ -1202,6 +1206,7 @@ a {
 
 .cta h2 {
   font-size: clamp(22px, 4vw, 34px);
+  margin-bottom: 40px;
 }
 
 .cta span {
@@ -1541,7 +1546,7 @@ a {
 .fix-forward-subtitle {
   font-size: clamp(0.9rem, 1.3vw, 1.1rem);
   /* Slightly reduced size */
-  color: #666;
+  color: #222;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
@@ -1585,14 +1590,14 @@ a {
 }
 
 .ff-meaning-text {
-  color: #444;
+  color: #111;
   line-height: 1.7;
   margin-bottom: 30px;
   font-size: 0.95rem;
 }
 
 .dark .ff-meaning-text {
-  color: #aaa;
+  color: #eee;
 }
 
 .ff-meaning-text p {
@@ -1672,18 +1677,22 @@ a {
 }
 
 .ff-register-btn {
+  display: block;
+  text-align: center;
   width: 100%;
   padding: 20px;
   background: var(--primary);
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  /* Slightly reduced for better mobile wrap */
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .ff-register-btn:hover {
