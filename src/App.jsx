@@ -127,6 +127,7 @@ function App() {
     <div className={dark ? "app dark" : "app"} ref={containerRef}>
       <CustomCursor dark={dark} />
       <SpaceBackground dark={dark} />
+      <SolarSystem />
 
       <nav className="navbar" ref={navRef}>
         <div className="logo">
@@ -146,7 +147,6 @@ function App() {
       </nav>
 
       <section className="hero">
-        <SolarSystem />
         <h1>
           {["Get", "Hired", "For", "Your"].map((w, i) => (
             <span key={i} className="word-wrapper">
@@ -392,6 +392,40 @@ function App() {
         <div className="free-banner">
           <h2>100% Free. Forever.</h2>
           <p>Join 3,154+ students who are already using HYRUP to build their careers. No hidden fees, no premium plans, no credit card required.</p>
+
+          <div className="growth-strip-banner-wrapper">
+            <div className="growth-strip">
+              {[
+                { label: "Total Active Students", val: "3,154", trend: "+12% this month" },
+                { label: "Participating Colleges", val: "4", accent: "top colleges" },
+                { label: "Partner Companies", val: "500+", accent: "hiring now" }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  className="growth-segment"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                  onHoverEnd={() => {
+                    const strip = document.querySelector('.free-banner .growth-strip');
+                    if (strip) {
+                      strip.classList.add('rope-wiggle');
+                      setTimeout(() => strip.classList.remove('rope-wiggle'), 1000);
+                    }
+                  }}
+                >
+                  <div className="segment-content">
+                    <div className="growth-num">
+                      {item.val}
+                      {item.trend && <span className="trend">{item.trend}</span>}
+                      {item.accent && <span className="accent">{item.accent}</span>}
+                    </div>
+                    <p>{item.label}</p>
+                  </div>
+                  {i < 2 && <div className="segment-divider" />}
+                </motion.div>
+              ))}
+            </div>
+          </div>
 
 
           <button className="btn red">START FOR FREE →</button>

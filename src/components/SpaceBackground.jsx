@@ -52,8 +52,11 @@ function Starfield({ dark }) {
 export default function SpaceBackground({ dark }) {
     return (
         <div className="space-bg-container">
-            <Canvas camera={{ position: [0, 0, 1] }}>
-                <color attach="background" args={[dark ? "#000000" : "#bcb7ac"]} />
+            <Canvas
+                camera={{ position: [0, 0, 1] }}
+                gl={{ alpha: true }}
+                onCreated={(state) => state.gl.setClearColor(0x000000, 0)}
+            >
                 <Starfield dark={dark} />
             </Canvas>
         </div>

@@ -125,6 +125,35 @@ body.dark {
   box-shadow: 0 8px 25px rgba(255, 92, 77, 0.4);
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-btns {
+    gap: 8px;
+  }
+
+  .nav-btns .btn {
+    padding: 8px 12px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .nav-btns .btn:not(.dark):not(.red) {
+    display: none;
+    /* Hide non-essential buttons on very small screens to save space */
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
+
+  .logo-img {
+    height: 24px;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -132,15 +161,31 @@ a {
 
 /* HERO */
 .hero {
+  position: relative;
+  z-index: 100;
+  /* Content Layer */
   text-align: center;
   padding: 120px 20px 60px;
-  position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 80vh;
   justify-content: center;
+}
+
+.hero h1,
+.hero p,
+.hero-btns {
+  position: relative;
+  z-index: 11;
+  /* Above hero container background if any */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 40px;
+    min-height: 70vh;
+  }
 }
 
 /* SOLAR SYSTEM BACKGROUND */
@@ -151,15 +196,18 @@ a {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 2;
+  /* Logo layer - on top of stars, behind content */
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 1200px;
   overflow: visible;
-  opacity: 0.8 !important;
+  opacity: 0.6 !important;
 }
+
+/* Increased opacity to 0.6 for clear visibility */
 
 .dark .solar-container {
   opacity: 0.8 !important;
@@ -206,6 +254,17 @@ a {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  .solar-container {
+    opacity: 0.4 !important;
+    /* Reduce opacity more on mobile to keep text readable */
+  }
+
+  .sun {
+    width: clamp(100px, 40vw, 180px);
+  }
+}
+
 .hero h1 {
   font-size: clamp(36px, 9vw, 72px);
   line-height: 1.1;
@@ -249,6 +308,16 @@ a {
   display: flex;
   gap: 15px;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  /* Boost buttons above background logo */
+}
+
+.hero-btns .btn-wrapper {
+  display: contents;
+  /* Ensures button is the direct flex item */
 }
 
 /* STATS */
@@ -259,7 +328,8 @@ a {
   padding: 120px 50px;
   /* Increased vertical padding */
   position: relative;
-  z-index: 2;
+  z-index: 100;
+  /* Content Layer */
 }
 
 .stat-card {
@@ -290,7 +360,8 @@ a {
   justify-content: center;
   text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 100;
+  /* Content Layer */
 }
 
 .about-container {
@@ -427,15 +498,14 @@ a {
 
 /* FEATURES */
 .features {
-  padding: 180px 60px;
+  padding: 150px 20px;
   /* Increased vertical padding */
-  text-align: center;
+  background: transparent;
   position: relative;
-  z-index: 2;
+  z-index: 100;
+  /* Content Layer */
   overflow: hidden;
-
   opacity: 1;
-  /* Hide overflowing decor */
 }
 
 /* Background Decor */
@@ -911,6 +981,9 @@ a {
 .universities-collaboration {
   margin-top: 100px;
   text-align: center;
+  position: relative;
+  z-index: 100;
+  /* Content Layer */
 }
 
 .universities-collaboration h2 {
@@ -1027,7 +1100,7 @@ a {
 .university-box:hover {
   transform: translateY(-12px);
   border-color: var(--primary);
-  box-shadow: 0 20px 40px rgba(255, 92, 77, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .dark .university-box:hover {
@@ -1067,7 +1140,8 @@ a {
   padding: 150px 20px;
   /* Increased vertical padding */
   position: relative;
-  z-index: 2;
+  z-index: 100;
+  /* Content Layer */
 }
 
 .cta h2 {
@@ -1086,7 +1160,8 @@ a {
   padding: 25px 60px;
   /* More compact */
   position: relative;
-  z-index: 2;
+  z-index: 100;
+  /* Content Layer */
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   transition: background 0.4s ease, color 0.4s ease;
 }
@@ -1319,7 +1394,8 @@ a {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
+  /* Star layer - the absolute base */
   pointer-events: none;
 }
 
@@ -1354,7 +1430,8 @@ a {
   /* Transparent black for dark mode */
   position: relative;
   overflow: hidden;
-  z-index: 2;
+  z-index: 100;
+  /* Content Layer */
   color: #fff;
   transition: background 0.4s ease, color 0.4s ease;
 }
@@ -1563,6 +1640,12 @@ a {
   }
 }
 
+.community {
+  position: relative;
+  z-index: 100;
+  /* Content Layer */
+}
+
 .community h2 {
   font-size: clamp(32px, 5vw, 48px);
   margin-bottom: 15px;
@@ -1694,7 +1777,8 @@ a {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 2;
+  z-index: 100;
+  /* Content Layer */
 }
 
 .free-banner {
@@ -1705,6 +1789,16 @@ a {
   text-align: center;
   max-width: 1000px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.free-banner .btn.red {
+  margin-top: 40px;
+  /* Push the button down */
+  margin-bottom: -20px;
+  /* Bring it closer to the edge */
 }
 
 .free-banner h2 {
