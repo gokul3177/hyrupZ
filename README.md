@@ -1,16 +1,85 @@
-# React + Vite
+# HYRUP - Get Hired For Your Skills, Not Your Degree 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HYRUP is a modern, immersive student career launchpad designed to bridge the gap between traditional education and professional success. Built by students for students, HYRUP prioritizes actual skills and real-world problem-solving over college names.
 
-Currently, two official plugins are available:
+## 🌌 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. **Immersive Cosmic Experience**
+- **Dynamic Space Background**: A high-performance starry background that creates an atmospheric browsing experience.
+- **Floating Logo Infusion**: Centered, theme-aware branding that floats subtly between the background and content layers.
 
-## React Compiler
+### 2. **Next-Gen Custom Cursor**
+- **Neon Orange Pointer**: A sharp, high-fidelity arrow pointer with a vibrant neon orange glow.
+- **White Meteor Trail**: A realistic, physics-based meteor streak that follows the cursor, adding a sense of speed and fluidity.
+- **Theme-Aware Physics**: The cursor automatically adapts its fill and border colors based on the current Light/Dark mode for maximum visibility.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 3. **Fix Forward Challenge**
+- A dedicated platform section where students can register for the "Fix Forward" initiative, focusing on solving actual industry problems rather than academic exercises.
 
-## Expanding the ESLint configuration
+### 4. **Modern UI/UX**
+- **Accessible Typography**: Ultra-refined font scaling and high-contrast color palettes specifically tuned for mobile readability and desktop spatiality.
+- **Smooth Animations**: Powered by **GSAP** and **Framer Motion** for silky-smooth transitions and micro-interactions.
+- **Glassmorphism Design**: Semi-transparent, blurred-background cards and navigation bars that enhance visual depth.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Animation**: [GSAP](https://greensock.com/gsap/) & [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Styling**: Vanilla CSS & [Tailwind CSS](https://tailwindcss.com/)
+- **3D Elements**: [Three.js](https://threejs.org/) (integration capability)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (version 18 or higher recommended)
+- `npm` or `yarn`
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/gokul3177/hyrupZ.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd hyrup0
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Run the development server:
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`.
+
+### Production Build
+
+To create an optimized production build:
+```bash
+npm run build
+```
+
+## 📂 Project Structure
+
+- `src/components/`: Reusable React components (CustomCursor, SpaceBackground, etc.)
+- `src/App.jsx`: Main application logic and layout.
+- `src/App.css`: Global styles and theme definitions.
+- `src/assets/`: Static assets including logos and images.
+
+## 🚢 Deployment
+
+This project is automatically deployed to **GitHub Pages** using GitHub Actions whenever changes are pushed to the `main` branch.
+
+---
+Built with ❤️ by students, for students.
