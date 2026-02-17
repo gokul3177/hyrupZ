@@ -78,7 +78,11 @@ body.dark {
   border-radius: 6px;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero-btns {
+  flex-wrap: wrap;
 }
 
 .btn:hover {
