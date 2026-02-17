@@ -367,10 +367,10 @@ function App() {
 
             <div className="university-grid">
               {[
-                { name: "SASTRA University", count: "834 students", percent: 90, icon: sastraLogo },
-                { name: "Jeppiaar Institute", count: "676 students", percent: 75, icon: jeppiarLogo },
-                { name: "PEC", count: "559 students", percent: 60, icon: pecLogo },
-                { name: "Manipur University", count: "350 students", percent: 40, icon: manipurLogo }
+                { name: "SASTRA", count: "834+ students", percent: 90, icon: sastraLogo },
+                { name: "JIT", count: "676+ students", percent: 75, icon: jeppiarLogo },
+                { name: "PEC", count: "559+ students", percent: 60, icon: pecLogo },
+                { name: "Manipur University", count: "350+ students", percent: 40, icon: manipurLogo }
               ].map((col, i) => (
                 <div key={i} className="university-box">
                   <div className="university-logo">

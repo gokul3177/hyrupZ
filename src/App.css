@@ -154,6 +154,29 @@ body.dark {
   }
 }
 
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .logo {
+    gap: 6px;
+  }
+
+  .logo span {
+    font-size: 14px;
+  }
+
+  .nav-btns {
+    gap: 6px;
+  }
+
+  .nav-btns .btn {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -404,6 +427,7 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   text-align: left;
+  opacity: 2;
 }
 
 .about-card {
