@@ -78,18 +78,6 @@ function App() {
       });
     });
 
-    // 3. Stats Cards Animation
-    gsap.from(".stat-card", {
-      scrollTrigger: {
-        trigger: ".stats",
-        start: "top 85%",
-      },
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "back.out(1.7)"
-    });
 
     // 4. Feature Cards Animation
     gsap.from(".feature-card", {
@@ -105,19 +93,6 @@ function App() {
       clearProps: "all" // Ensure styles are cleared after animation
     });
 
-    // 5. Community Section Animation
-    gsap.from(".growth-item", {
-      scrollTrigger: {
-        trigger: ".community-main",
-        start: "top 85%",
-      },
-      y: 40,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.1,
-      ease: "power3.out",
-      clearProps: "all"
-    });
 
     // 6. University Grid Animation
     gsap.from(".university-box", {
@@ -206,28 +181,6 @@ function App() {
               <a href="https://www.hyrup.in/#features">EXPLORE FEATURES</a>
             </button>
           </div>
-        </div>
-      </section>
-
-      <section className="stats">
-        <div className="stat-card">
-          <h2>3,154+</h2>
-          <p>Students Connected</p>
-        </div>
-
-        <div className="stat-card">
-          <h2>500+</h2>
-          <p>Partner Companies</p>
-        </div>
-
-        <div className="stat-card">
-          <h2>2K+</h2>
-          <p>Active Jobs</p>
-        </div>
-
-        <div className="stat-card">
-          <h2>100%</h2>
-          <p>Free Forever</p>
         </div>
       </section>
 
@@ -438,39 +391,8 @@ function App() {
       <section className="free-banner-section">
         <div className="free-banner">
           <h2>100% Free. Forever.</h2>
-          <p>Join 3,154+ students who are already using HYRUP to build their careers. No hidden fees, no premium plans, no credit card required.</p>
+          <p>Join students who are already using HYRUP to build their careers. No hidden fees, no premium plans, no credit card required.</p>
 
-          <div className="growth-strip-banner-wrapper">
-            <div className="growth-strip">
-              {[
-                { label: "Total Active Students", val: "3,154", trend: "+12% this month" },
-                { label: "Participating Colleges", val: "4", accent: "top colleges" },
-                { label: "Partner Companies", val: "500+", accent: "hiring now" }
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  className="growth-segment"
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                  onHoverEnd={() => {
-                    const strip = document.querySelector('.free-banner .growth-strip');
-                    strip.classList.add('rope-wiggle');
-                    setTimeout(() => strip.classList.remove('rope-wiggle'), 1000);
-                  }}
-                >
-                  <div className="segment-content">
-                    <div className="growth-num">
-                      {item.val}
-                      {item.trend && <span className="trend">{item.trend}</span>}
-                      {item.accent && <span className="accent">{item.accent}</span>}
-                    </div>
-                    <p>{item.label}</p>
-                  </div>
-                  {i < 2 && <div className="segment-divider" />}
-                </motion.div>
-              ))}
-            </div>
-          </div>
 
           <button className="btn red">START FOR FREE →</button>
         </div>
