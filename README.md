@@ -1,5 +1,7 @@
 # HYRUP - Get Hired For Your Skills, Not Your Degree 🚀
 
+# Check out the live app here,  https://gokul3177.github.io/hyrupZ/
+
 HYRUP is a modern, immersive student career launchpad designed to bridge the gap between traditional education and professional success. Built by students for students, HYRUP prioritizes actual skills and real-world problem-solving over college names.
 
 ## 🌌 Features
